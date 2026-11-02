@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "claims": [
+    {
+      "id": "R01",
+      "statement": "The retained Title 18 PDF has a complete physical-page extraction denominator.",
+      "status": "recorded-snapshot",
+      "scope": "This Reno retained edition and deployment",
+      "evidence": [
+        "pages-data/documents/input.json",
+        "pages-data/documents/reno-title18.pdf"
+      ],
+      "notEstablished": "Complete municipal-code coverage, legal currency and correct interpretation"
+    },
+    {
+      "id": "R02",
+      "statement": "Reno owns independent identity and an explicit national-monitor allowlist.",
+      "status": "configuration",
+      "scope": "This Reno retained edition and deployment",
+      "evidence": [
+        "region.json",
+        "configs/reno-civic.json",
+        "configs/reno-region.json"
+      ],
+      "notEstablished": "Provider availability, surveyed boundaries and hazard absence"
+    },
+    {
+      "id": "R03",
+      "statement": "The consumer pins shared methods and renders through the actual pinned template API.",
+      "status": "implementation",
+      "scope": "This Reno retained edition and deployment",
+      "evidence": [
+        "package.json",
+        "bun.lock",
+        "docs/manuscript/config.json"
+      ],
+      "notEstablished": "Scientific, legal or release approval from successful rendering"
+    },
+    {
+      "id": "R04",
+      "statement": "Document acquisition preserves stated edition, rights and source identity.",
+      "status": "implementation",
+      "scope": "This Reno retained edition and deployment",
+      "evidence": [
+        "documents.json",
+        "pages-data/documents/input.json"
+      ],
+      "notEstablished": "Transfer of third-party rights or a guarantee that later amendments are included"
+    },
+    {
+      "id": "R05",
+      "statement": "Every extracted page contributes to the descriptive line-count profile.",
+      "status": "descriptive-snapshot",
+      "scope": "This Reno retained edition and deployment",
+      "evidence": [
+        "pages-data/documents/input.json"
+      ],
+      "notEstablished": "Regulatory burden, relative legal importance or population inference"
+    },
+    {
+      "id": "R06",
+      "statement": "The shared HTTP error and separately recorded public PDF capture remain distinct observations.",
+      "status": "recorded-transport-observation",
+      "scope": "This acquisition and retained source-check interval",
+      "evidence": [
+        "pages-data/documents/input.json",
+        "pages-data/regional-observations.json"
+      ],
+      "notEstablished": "Ongoing provider availability, the cause of access differences or independent proof of an operator transport declaration"
+    }
+  ]
+}

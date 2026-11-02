@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "region-deployment/v1",
+  "civicProfile": "configs/reno-civic.json",
+  "regionConfig": "configs/reno-region.json",
+  "outputDir": "output",
+  "seedDir": "pages-data",
+  "enabledMonitors": [
+    "earthquake",
+    "weather",
+    "airquality",
+    "drought",
+    "smoke"
+  ],
+  "sources": [
+    {
+      "id": "reno-title18",
+      "name": "Reno Title 18: official land-development PDF",
+      "url": "https://www.reno.gov/Documents/Business%20and%20Development/Development%20Services/Zoning%20Code/Title%2018%20Final%20amended%2060326.pdf",
+      "kind": "code"
+    },
+    {
+      "id": "reno-administrative",
+      "name": "Reno administrative code (Municode)",
+      "url": "https://library.municode.com/nv/reno/codes/administrative_code",
+      "kind": "code"
+    },
+    {
+      "id": "reno-land-development",
+      "name": "Reno land-development code (Municode)",
+      "url": "https://library.municode.com/nv/reno/codes/land_development_code",
+      "kind": "code"
+    },
+    {
+      "id": "reno-code-guidance",
+      "name": "City Attorney: municipal-code guidance",
+      "url": "https://www.reno.gov/government/departments/city-attorney/civil-division/faqs.php",
+      "kind": "official"
+    },
+    {
+      "id": "reno-zoning",
+      "name": "City of Reno zoning code",
+      "url": "https://www.reno.gov/business-development/development-services/zoning-code/index.php",
+      "kind": "official"
+    },
+    {
+      "id": "reno-government",
+      "name": "City of Reno",
+      "url": "https://www.reno.gov",
+      "kind": "official"
+    },
+    {
+      "id": "reno-council",
+      "name": "Reno official meeting portal",
+      "url": "https://reno.primegov.com/public/portal",
+      "kind": "meetings"
+    },
+    {
+      "id": "reno-calendar",
+      "name": "Reno community events",
+      "url": "https://www.reno.gov/calendar/",
+      "kind": "events"
+    },
+    {
+      "id": "reno-roads",
+      "name": "City of Reno road-closure map",
+      "url": "https://reno.gov/community/road-closures.php",
+      "kind": "official"
+    },
+    {
+      "id": "nevada-roads",
+      "name": "Nevada 511",
+      "url": "https://www.nvroads.com",
+      "kind": "official"
+    },
+    {
+      "id": "nevada-roads-api",
+      "name": "Nevada 511 developer documentation",
+      "url": "https://www.nvroads.com/developers/doc",
+      "kind": "official"
+    },
+    {
+      "id": "ndot-travel",
+      "name": "Nevada DOT travel information",
+      "url": "https://www.dot.nv.gov/travel-info",
+      "kind": "official"
+    },
+    {
+      "id": "nnph-air",
+      "name": "Northern Nevada Public Health air quality",
+      "url": "https://www.nnph.org/programs-and-services/air-quality/index.php",
+      "kind": "official"
+    },
+    {
+      "id": "nws-reno",
+      "name": "National Weather Service Reno",
+      "url": "https://www.weather.gov/rev/",
+      "kind": "official"
+    },
+    {
+      "id": "nws-zone",
+      "name": "NWS Greater Reno\u2013Carson City\u2013Minden forecast",
+      "url": "https://forecast.weather.gov/MapClick.php?zoneid=NVZ003",
+      "kind": "official"
+    },
+    {
+      "id": "usgs-earthquakes",
+      "name": "USGS hourly earthquake GeoJSON",
+      "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
+      "kind": "official"
+    },
+    {
+      "id": "drought-nevada",
+      "name": "US Drought Monitor: Nevada",
+      "url": "https://droughtmonitor.unl.edu/CurrentMap/StateDroughtMonitor.aspx?NV",
+      "kind": "official"
+    },
+    {
+      "id": "trfma",
+      "name": "Truckee River Flood Management Authority",
+      "url": "https://trfma.org/",
+      "kind": "official"
+    },
+    {
+      "id": "washoe-emergency",
+      "name": "Washoe County emergency management",
+      "url": "https://www.washoecounty.gov/em/",
+      "kind": "official"
+    },
+    {
+      "id": "washoe-code",
+      "name": "Washoe County code: separate jurisdiction",
+      "url": "https://www.washoecounty.gov/clerks/cco/county_code.php",
+      "kind": "code"
+    },
+    {
+      "id": "census-washoe",
+      "name": "Census authoritative county FIPS reference",
+      "url": "https://tigerweb.geo.census.gov/tigerwebmain/Files/acs25/tigerweb_acs25_county_nv.html",
+      "kind": "official"
+    },
+    {
+      "id": "reno-newsroom",
+      "name": "City of Reno newsroom (catalog only)",
+      "url": "https://www.reno.gov/news/index.php",
+      "kind": "news"
+    },
+    {
+      "id": "reno-permits",
+      "name": "ONE regional licensing and permit portal",
+      "url": "https://aca-prod.accela.com/ONE/Default.aspx",
+      "kind": "official"
+    }
+  ]
+}

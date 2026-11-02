@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/docxology/template",
+  "revision": "c18dae54a07fe6ac3a7b1a1a274251c169a12e7a",
+  "inputFingerprint": "40297038beeb47cfed581606a4ba88beb3e9a707ac27fc2a10ee4519f95a7769",
+  "tools": {
+    "template": "docxology/template@c18dae54a07fe6ac3a7b1a1a274251c169a12e7a",
+    "python": "3.14.8 (main, Oct  9 2026, 15:11:09) [Clang 22.1.3 ]",
+    "matplotlib": "3.11.2"
+  },
+  "api": [
+    "RenderManager.render_combined_pdf",
+    "RenderManager.render_combined_web"
+  ],
+  "rendererModuleSha256": "35a92c33490f5804bfba6de10c63ea481fc6753fd65e75004f21494f189ef78d",
+  "formats": [
+    "pdf",
+    "html"
+  ],
+  "offlineAssets": true
+}

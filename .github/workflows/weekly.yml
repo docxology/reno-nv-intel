@@ -1,0 +1,33 @@
+name: Weekly regional source collection
+on:
+  schedule:
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # actions/checkout@v7.0.1
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # oven-sh/setup-bun@v2.2.0
+        with:
+          bun-version: '1.4.2'
+      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
+      - run: bun install --frozen-lockfile
+      - run: bunx playwright install --with-deps chromium
+      - run: bun run validate
+      - run: bun run sources:check
+      - run: bun run gov-meetings
+      - run: bun run alerts
+      - run: bun run observations:seed
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # actions/upload-artifact@v7.0.2
+        if: always()
+        with:
+          name: reno-source-observations
+          path: |
+            output/
+            pages-data/regional-observations.json
+          include-hidden-files: true
+          retention-days: 7

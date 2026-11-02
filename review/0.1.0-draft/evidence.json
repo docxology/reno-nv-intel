@@ -1,0 +1,466 @@
+{
+  "schemaVersion": "regional-document-manuscript-evidence/v1",
+  "selectedConfiguration": {
+    "deployment": {
+      "schemaVersion": "region-deployment/v1",
+      "civicProfile": "configs/reno-civic.json",
+      "regionConfig": "configs/reno-region.json",
+      "outputDir": "output",
+      "seedDir": "pages-data",
+      "enabledMonitors": [
+        "earthquake",
+        "weather",
+        "airquality",
+        "drought",
+        "smoke"
+      ],
+      "sources": [
+        {
+          "id": "reno-title18",
+          "name": "Reno Title 18: official land-development PDF",
+          "url": "https://www.reno.gov/Documents/Business%20and%20Development/Development%20Services/Zoning%20Code/Title%2018%20Final%20amended%2060326.pdf",
+          "kind": "code"
+        },
+        {
+          "id": "reno-administrative",
+          "name": "Reno administrative code (Municode)",
+          "url": "https://library.municode.com/nv/reno/codes/administrative_code",
+          "kind": "code"
+        },
+        {
+          "id": "reno-land-development",
+          "name": "Reno land-development code (Municode)",
+          "url": "https://library.municode.com/nv/reno/codes/land_development_code",
+          "kind": "code"
+        },
+        {
+          "id": "reno-code-guidance",
+          "name": "City Attorney: municipal-code guidance",
+          "url": "https://www.reno.gov/government/departments/city-attorney/civil-division/faqs.php",
+          "kind": "official"
+        },
+        {
+          "id": "reno-zoning",
+          "name": "City of Reno zoning code",
+          "url": "https://www.reno.gov/business-development/development-services/zoning-code/index.php",
+          "kind": "official"
+        },
+        {
+          "id": "reno-government",
+          "name": "City of Reno",
+          "url": "https://www.reno.gov",
+          "kind": "official"
+        },
+        {
+          "id": "reno-council",
+          "name": "Reno official meeting portal",
+          "url": "https://reno.primegov.com/public/portal",
+          "kind": "meetings"
+        },
+        {
+          "id": "reno-calendar",
+          "name": "Reno community events",
+          "url": "https://www.reno.gov/calendar/",
+          "kind": "events"
+        },
+        {
+          "id": "reno-roads",
+          "name": "City of Reno road-closure map",
+          "url": "https://reno.gov/community/road-closures.php",
+          "kind": "official"
+        },
+        {
+          "id": "nevada-roads",
+          "name": "Nevada 511",
+          "url": "https://www.nvroads.com",
+          "kind": "official"
+        },
+        {
+          "id": "nevada-roads-api",
+          "name": "Nevada 511 developer documentation",
+          "url": "https://www.nvroads.com/developers/doc",
+          "kind": "official"
+        },
+        {
+          "id": "ndot-travel",
+          "name": "Nevada DOT travel information",
+          "url": "https://www.dot.nv.gov/travel-info",
+          "kind": "official"
+        },
+        {
+          "id": "nnph-air",
+          "name": "Northern Nevada Public Health air quality",
+          "url": "https://www.nnph.org/programs-and-services/air-quality/index.php",
+          "kind": "official"
+        },
+        {
+          "id": "nws-reno",
+          "name": "National Weather Service Reno",
+          "url": "https://www.weather.gov/rev/",
+          "kind": "official"
+        },
+        {
+          "id": "nws-zone",
+          "name": "NWS Greater Reno–Carson City–Minden forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?zoneid=NVZ003",
+          "kind": "official"
+        },
+        {
+          "id": "usgs-earthquakes",
+          "name": "USGS hourly earthquake GeoJSON",
+          "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
+          "kind": "official"
+        },
+        {
+          "id": "drought-nevada",
+          "name": "US Drought Monitor: Nevada",
+          "url": "https://droughtmonitor.unl.edu/CurrentMap/StateDroughtMonitor.aspx?NV",
+          "kind": "official"
+        },
+        {
+          "id": "trfma",
+          "name": "Truckee River Flood Management Authority",
+          "url": "https://trfma.org/",
+          "kind": "official"
+        },
+        {
+          "id": "washoe-emergency",
+          "name": "Washoe County emergency management",
+          "url": "https://www.washoecounty.gov/em/",
+          "kind": "official"
+        },
+        {
+          "id": "washoe-code",
+          "name": "Washoe County code: separate jurisdiction",
+          "url": "https://www.washoecounty.gov/clerks/cco/county_code.php",
+          "kind": "code"
+        },
+        {
+          "id": "census-washoe",
+          "name": "Census authoritative county FIPS reference",
+          "url": "https://tigerweb.geo.census.gov/tigerwebmain/Files/acs25/tigerweb_acs25_county_nv.html",
+          "kind": "official"
+        },
+        {
+          "id": "reno-newsroom",
+          "name": "City of Reno newsroom (catalog only)",
+          "url": "https://www.reno.gov/news/index.php",
+          "kind": "news"
+        },
+        {
+          "id": "reno-permits",
+          "name": "ONE regional licensing and permit portal",
+          "url": "https://aca-prod.accela.com/ONE/Default.aspx",
+          "kind": "official"
+        }
+      ]
+    },
+    "profile": {
+      "schemaVersion": "civic-profile/v1",
+      "id": "reno-nv",
+      "name": "Reno",
+      "municipality": "Reno, NV",
+      "county": "Washoe County",
+      "state": "Nevada",
+      "countryCode": "US",
+      "timeZone": "America/Los_Angeles",
+      "anchor": {
+        "latitude": 39.5296,
+        "longitude": -119.8138,
+        "bounds": {
+          "west": -120.05,
+          "south": 39.25,
+          "east": -119.55,
+          "north": 39.85
+        }
+      },
+      "code": null,
+      "corpusSlug": "reno-nv-documents",
+      "vectorNamespace": "reno-nv-documents",
+      "calendar": {
+        "uidDomain": "reno-nv-intel",
+        "productId": "-//Reno NV Intel//Regional Events//EN"
+      },
+      "publication": {
+        "title": "Reno NV Intel",
+        "description": "Composable public evidence for Reno and the Truckee Meadows: retained documents, source availability and reproducible research",
+        "siteUrl": "https://docxology.github.io/reno-nv-intel",
+        "repositoryUrl": "https://github.com/docxology/reno-nv-intel"
+      },
+      "capabilities": [
+        "analytics",
+        "geo"
+      ]
+    },
+    "policy": {
+      "alerts": {
+        "airQuality": {
+          "latitude": 39.5296,
+          "longitude": -119.8138,
+          "publicStationRadiusKm": 50,
+          "zip": "89501"
+        },
+        "ais": {
+          "feedUrl": "https://meri.digitraffic.fi/api/ais/v1/locations",
+          "watchBox": {
+            "maxLat": 42.1,
+            "maxLon": -123.9,
+            "minLat": 41.6,
+            "minLon": -124.45
+          }
+        },
+        "dredging": {
+          "sitemapUrl": "https://www.ccharbor.com/sitemap.xml",
+          "windowDays": 90
+        },
+        "drought": {
+          "county": "Washoe",
+          "fips": "32031",
+          "state": "NV"
+        },
+        "earthquake": {
+          "latitude": 39.5296,
+          "longitude": -119.8138,
+          "minMagnitude": 4,
+          "radiusKm": 200
+        },
+        "fishing": {
+          "bulletinUrl": "https://wildlife.ca.gov/Fishing/Ocean/Regulations/Bulletins",
+          "region": "California"
+        },
+        "fuel": {
+          "seriesId": "EMM_EPM0_PTE_SCA_DPG",
+          "spikeThreshold": 0.15,
+          "state": "California",
+          "trendWeeks": 8,
+          "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EMM_EPM0_PTE_SCA_DPG&f=W"
+        },
+        "marine": {
+          "stations": [
+            {
+              "distanceNm": 27,
+              "id": "46027",
+              "latitude": 41.85,
+              "longitude": -124.38,
+              "name": "St Georges CA"
+            },
+            {
+              "distanceNm": 120,
+              "id": "46022",
+              "latitude": 40.72,
+              "longitude": -124.53,
+              "name": "Eel River CA"
+            },
+            {
+              "distanceNm": 60,
+              "id": "46214",
+              "latitude": 40.88,
+              "longitude": -124.36,
+              "name": "Humboldt Bay CA"
+            }
+          ],
+          "waveHeightWarningFt": 15,
+          "waveHeightWatchFt": 10,
+          "windSpeedWarningKt": 34,
+          "windSpeedWatchKt": 22
+        },
+        "marineForecast": {
+          "productLocation": "EKA",
+          "zoneCode": "PZZ450"
+        },
+        "pacfin": {
+          "dashboardUrl": "https://reports.psmfc.org/pacfin/"
+        },
+        "permits": {
+          "catalogUrl": "https://aca-prod.accela.com/ONE/Default.aspx"
+        },
+        "psps": {
+          "county": "Washoe",
+          "utility": "NV Energy"
+        },
+        "roads": {
+          "county": "Washoe",
+          "routes": [
+            "80",
+            "580",
+            "395"
+          ],
+          "textUrl": "https://roads.dot.ca.gov/?roadnumber="
+        },
+        "schools": {
+          "alertsUrl": "https://www.washoeschools.net",
+          "district": "Washoe County School District",
+          "fallbackUrl": "https://www.washoeschools.net",
+          "websiteUrl": "https://www.washoeschools.net"
+        },
+        "smoke": {
+          "box": {
+            "latMax": 39.85,
+            "latMin": 39.25,
+            "lonMax": -119.55,
+            "lonMin": -120.05
+          }
+        },
+        "tides": {
+          "highTideAlertFt": 7,
+          "stationId": "9419750",
+          "stationName": "Crescent City, CA"
+        },
+        "tsunami": {
+          "capArea": "CA"
+        },
+        "uscg": {
+          "district": 11,
+          "listUrl": "https://www.navcen.uscg.gov/broadcast-notice-to-mariners-search-results?district=11&sector=0&date-range={START}--{END}&items_per_page=50",
+          "messageUrl": "https://www.navcen.uscg.gov/broadcast-notice-to-mariners-message?guid={GUID}",
+          "windowDays": 35
+        },
+        "weather": {
+          "latitude": 39.5296,
+          "longitude": -119.8138,
+          "nwsZone": "NVZ003"
+        },
+        "wildfire": {
+          "counties": [
+            "Washoe",
+            "Storey",
+            "Douglas",
+            "Carson City"
+          ],
+          "latitude": 39.5296,
+          "longitude": -119.8138,
+          "radiusKm": 150
+        }
+      },
+      "id": "reno-nv",
+      "profileId": "reno-nv",
+      "schemaVersion": "region-config/v1"
+    }
+  },
+  "template": {
+    "repository": "https://github.com/docxology/template",
+    "revision": "c18dae54a07fe6ac3a7b1a1a274251c169a12e7a"
+  },
+  "profileId": "reno-nv",
+  "editionId": "f687a3da4cad5ef36df9d242d53dc400570e93f675f907ac3391ff25c20e961a",
+  "variables": {
+    "REGION_NAME": "Reno",
+    "PROFILE_ID": "reno-nv",
+    "MUNICIPALITY_CODE": "reno-title18",
+    "CODE_ARTICLES": "555",
+    "CODE_SECTIONS": "21850",
+    "SOURCE_COUNT": "23",
+    "MONITOR_COUNT": "5",
+    "VERIFIED_AT": "2026-11-01T23:40:30.028Z",
+    "EDITION_ID": "f687a3da4cad5ef36df9d242d53dc400570e93f675f907ac3391ff25c20e961a",
+    "CORE_PIN": "eed4cdb9e814a6cfc12ecb961611996378672bbf",
+    "EVIDENCE_FINGERPRINT": "40297038beeb47cfed581606a4ba88beb3e9a707ac27fc2a10ee4519f95a7769",
+    "CODE_MEDIAN_SECTIONS": "43",
+    "CODE_MAX_SECTIONS": "57",
+    "CODE_MIN_SECTIONS": "5",
+    "CODE_EMPTY_ARTICLES": "0",
+    "TEMPLATE_PIN": "c18dae54a07fe6ac3a7b1a1a274251c169a12e7a"
+  },
+  "files": {
+    "documents.json": {
+      "sha256": "382edfacf110ae7444b722aa08056a2f282ae2cf885bd95c0f75b5c8de13c84f",
+      "bytes": 790
+    },
+    "pages-data/documents/input.json": {
+      "sha256": "f687a3da4cad5ef36df9d242d53dc400570e93f675f907ac3391ff25c20e961a",
+      "bytes": 2123305
+    },
+    "pages-data/documents/reno-title18.pdf": {
+      "sha256": "3d5ec8ecd34bfcfac1d2ddc0dedf14870113925091900796bf918643410ad8ea",
+      "bytes": 9108432
+    },
+    "region.json": {
+      "sha256": "70db56dadd5c26aba2f7b75727fb1d323255cba8cb806e42336dda340d2b5a95",
+      "bytes": 4603
+    },
+    "configs/reno-civic.json": {
+      "sha256": "a359c90d81457eee17bf208baf728e0c73304a03c8d05ff62982d30390a9b190",
+      "bytes": 990
+    },
+    "configs/reno-region.json": {
+      "sha256": "2181b9daf99fa135649af4488bdd380982ba3fb64078ff2a1be98719acbc4fe5",
+      "bytes": 3561
+    },
+    "package.json": {
+      "sha256": "7ab0c3b7e57f1a9ac54630ada34c871fa949ffa4e12b919078a0a4e4128c13b5",
+      "bytes": 2694
+    },
+    "bun.lock": {
+      "sha256": "64d69adacb8af976da73097f3fc61ccbe2314bfca0bb8d37ac2c80480e3db0d1",
+      "bytes": 8944
+    },
+    "docs/manuscript/config.json": {
+      "sha256": "c9769d39c7a73a13ebc7c83e07f640c10795270637b6de276828e584257a671b",
+      "bytes": 669
+    },
+    "docs/manuscript/00_abstract.md": {
+      "sha256": "822417f13c8efd7515b6bad6db048676c41cf160c21623f9d1c9674cd545656f",
+      "bytes": 1438
+    },
+    "docs/manuscript/01_introduction.md": {
+      "sha256": "7ec38d108b8c37464aecc3f1e06cb8d191975f889fa2158e25b230b27c2cdbbc",
+      "bytes": 3079
+    },
+    "docs/manuscript/02_methods.md": {
+      "sha256": "7af0365a5cd2b912185385b80be0bf35f300a25b47011cbb8b80da6bd6c88584",
+      "bytes": 4130
+    },
+    "docs/manuscript/03_results.md": {
+      "sha256": "620ac78be656760d5911bd51461f9e5d21de40f5380dda0096c6f27ab892fc47",
+      "bytes": 2762
+    },
+    "docs/manuscript/04_discussion.md": {
+      "sha256": "2da03a14a7357474e30b4e6bc9317abfef18e6045b9d426afcc39d0f6fe1794d",
+      "bytes": 2603
+    },
+    "docs/manuscript/05_limitations_and_ethics.md": {
+      "sha256": "b933acb47df8cbfee60501468c00a2ae905329c2f4bb8b4c9391e99d80348b2b",
+      "bytes": 2984
+    },
+    "docs/manuscript/06_reproducibility.md": {
+      "sha256": "8821a5939356978ba692f3cc05276bf9e0e88e1da78a0126855743efac691a6a",
+      "bytes": 2979
+    },
+    "docs/manuscript/07_conclusion.md": {
+      "sha256": "7192d5681dc9da89050026603ac51c25e2e2b5798f12fd87f4442d5c4f76f511",
+      "bytes": 916
+    },
+    "docs/manuscript/08_appendix_formalism.md": {
+      "sha256": "9cd82bad6ec047594f27b3232fb95286d7d19a9b2f257b8f2abdd6f5789aafa6",
+      "bytes": 1697
+    },
+    "docs/manuscript/99_references.md": {
+      "sha256": "a0146629fe914d46423ad3b733e7c865ab26fc11f3a251e1d27405d58205ebe3",
+      "bytes": 48
+    },
+    "docs/manuscript/references.bib": {
+      "sha256": "f6fb7bd1762a929fe082338735145a8f9b88beb9b91c54b10c9ecbf34b3ba538",
+      "bytes": 3201
+    },
+    "docs/manuscript/claim_ledger.json": {
+      "sha256": "ce7cfec42e6360f6fae37bbace0f1625e8989726d10a73c98a3eec66ba6ce7c6",
+      "bytes": 2722
+    },
+    "docs/assets/reno-cover.png": {
+      "sha256": "c8b90093005d2ea2672e91bffdd2f0217a3e20f5aef7d5f80f51e1d6cf2c18d0",
+      "bytes": 3324632
+    },
+    "pages-data/regional-observations.json": {
+      "sha256": "005dff9e0b3a34bf47aa9d35bc2bbf156c47cb0b38113d889b9cff1d0a7a779a",
+      "bytes": 7698
+    }
+  },
+  "rendererSha256": "9487afa025eadf7d3bb20ddaa042a17fffa2a0d18a39e2513a34cc89d1e6d955",
+  "inputFingerprint": "40297038beeb47cfed581606a4ba88beb3e9a707ac27fc2a10ee4519f95a7769",
+  "limitations": [
+    "Retained public PDF edition; not the full municipal code",
+    "Physical PDF pages and nonempty extracted lines are extraction units, not legal sections",
+    "Page text replays through installed Poppler; figures, layout, tables and legal interpretation require the original",
+    "No legal currency, impact, model-factuality or release acceptance implied"
+  ]
+}

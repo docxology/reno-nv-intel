@@ -1,0 +1,43 @@
+name: Publish regional snapshot
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "30 8 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # actions/checkout@v7.0.1
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # oven-sh/setup-bun@v2.2.0
+        with:
+          bun-version: '1.4.2'
+      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
+      - run: bun install --frozen-lockfile
+      - name: Verify the committed public input and manuscript closure
+        run: bun run publication:check
+      - run: bunx playwright install --with-deps chromium
+      - run: bun run validate
+      - run: bun run pages:export
+      - run: bun run pages:validate -- .pages
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # actions/upload-pages-artifact@v5.0.0
+        with:
+          path: .pages
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # actions/deploy-pages@v5.0.1
+        id: deployment

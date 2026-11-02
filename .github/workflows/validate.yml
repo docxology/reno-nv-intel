@@ -1,0 +1,24 @@
+name: Regional consumer acceptance
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # actions/checkout@v7.0.1
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # oven-sh/setup-bun@v2.2.0
+        with:
+          bun-version: '1.4.2'
+      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
+      - run: bun install --frozen-lockfile
+      - name: Verify the committed public input and manuscript closure
+        run: bun run publication:check
+      - run: bun run release:check
+      - run: bun run pages:export
+      - run: bun run pages:validate -- .pages

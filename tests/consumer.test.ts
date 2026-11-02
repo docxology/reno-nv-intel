@@ -1,0 +1,6 @@
+import {test,expect} from "bun:test";
+import {loadDeployment} from "region-intel/deployment";
+import {readDocuments} from "region-intel/regional_documents";
+import {readFile,readdir} from "node:fs/promises";
+test("Reno imports shared methods and admits only configured national monitors",async()=>{const d=loadDeployment(process.cwd());expect(d.profile.id).toBe("reno-nv");expect(d.profile.state).toBe("Nevada");expect(d.profile.code).toBeNull();expect(d.config.enabledMonitors).toEqual(["earthquake","weather","airquality","drought","smoke"]);expect(d.policy.alerts.drought.fips).toBe("32031");expect(d.policy.alerts.weather.nwsZone).toBe("NVZ003");expect((await readFile("scripts/region.ts","utf8")).includes('from "region-intel/cli"')).toBe(true);expect((await readdir(".")).includes("src")).toBe(false);});
+test("retained official PDF uses physical page and extraction-line units",async()=>{const d=loadDeployment(process.cwd()),r=await readDocuments(d);expect(r.receipt.profileId).toBe("reno-nv");expect(r.receipt.documents).toHaveLength(1);expect(r.profile.units?.items).toBe("PDF pages");expect(r.profile.totalArticles).toBe(555);expect(r.profile.totalSections).toBeGreaterThan(1000);expect(r.receipt.documents[0]!.pages[0]!.text).toContain("AMENDED");expect(r.receipt.documents[0]!.pages.at(-1)!.page).toBe(555);},30000);

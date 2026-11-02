@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "civic-profile/v1",
+  "id": "reno-nv",
+  "name": "Reno",
+  "municipality": "Reno, NV",
+  "county": "Washoe County",
+  "state": "Nevada",
+  "countryCode": "US",
+  "timeZone": "America/Los_Angeles",
+  "anchor": {
+    "latitude": 39.5296,
+    "longitude": -119.8138,
+    "bounds": {
+      "west": -120.05,
+      "south": 39.25,
+      "east": -119.55,
+      "north": 39.85
+    }
+  },
+  "code": null,
+  "corpusSlug": "reno-nv-documents",
+  "vectorNamespace": "reno-nv-documents",
+  "calendar": {
+    "uidDomain": "reno-nv-intel",
+    "productId": "-//Reno NV Intel//Regional Events//EN"
+  },
+  "publication": {
+    "title": "Reno NV Intel",
+    "description": "Composable public evidence for Reno and the Truckee Meadows: retained documents, source availability and reproducible research",
+    "siteUrl": "https://docxology.github.io/reno-nv-intel",
+    "repositoryUrl": "https://github.com/docxology/reno-nv-intel"
+  },
+  "capabilities": [
+    "analytics",
+    "geo"
+  ]
+}

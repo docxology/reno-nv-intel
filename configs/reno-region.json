@@ -1,0 +1,144 @@
+{
+  "alerts": {
+    "airQuality": {
+      "latitude": 39.5296,
+      "longitude": -119.8138,
+      "publicStationRadiusKm": 50,
+      "zip": "89501"
+    },
+    "ais": {
+      "feedUrl": "https://meri.digitraffic.fi/api/ais/v1/locations",
+      "watchBox": {
+        "maxLat": 42.1,
+        "maxLon": -123.9,
+        "minLat": 41.6,
+        "minLon": -124.45
+      }
+    },
+    "dredging": {
+      "sitemapUrl": "https://www.ccharbor.com/sitemap.xml",
+      "windowDays": 90
+    },
+    "drought": {
+      "county": "Washoe",
+      "fips": "32031",
+      "state": "NV"
+    },
+    "earthquake": {
+      "latitude": 39.5296,
+      "longitude": -119.8138,
+      "minMagnitude": 4,
+      "radiusKm": 200
+    },
+    "fishing": {
+      "bulletinUrl": "https://wildlife.ca.gov/Fishing/Ocean/Regulations/Bulletins",
+      "region": "California"
+    },
+    "fuel": {
+      "seriesId": "EMM_EPM0_PTE_SCA_DPG",
+      "spikeThreshold": 0.15,
+      "state": "California",
+      "trendWeeks": 8,
+      "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EMM_EPM0_PTE_SCA_DPG&f=W"
+    },
+    "marine": {
+      "stations": [
+        {
+          "distanceNm": 27,
+          "id": "46027",
+          "latitude": 41.85,
+          "longitude": -124.38,
+          "name": "St Georges CA"
+        },
+        {
+          "distanceNm": 120,
+          "id": "46022",
+          "latitude": 40.72,
+          "longitude": -124.53,
+          "name": "Eel River CA"
+        },
+        {
+          "distanceNm": 60,
+          "id": "46214",
+          "latitude": 40.88,
+          "longitude": -124.36,
+          "name": "Humboldt Bay CA"
+        }
+      ],
+      "waveHeightWarningFt": 15,
+      "waveHeightWatchFt": 10,
+      "windSpeedWarningKt": 34,
+      "windSpeedWatchKt": 22
+    },
+    "marineForecast": {
+      "productLocation": "EKA",
+      "zoneCode": "PZZ450"
+    },
+    "pacfin": {
+      "dashboardUrl": "https://reports.psmfc.org/pacfin/"
+    },
+    "permits": {
+      "catalogUrl": "https://aca-prod.accela.com/ONE/Default.aspx"
+    },
+    "psps": {
+      "county": "Washoe",
+      "utility": "NV Energy"
+    },
+    "roads": {
+      "county": "Washoe",
+      "routes": [
+        "80",
+        "580",
+        "395"
+      ],
+      "textUrl": "https://roads.dot.ca.gov/?roadnumber="
+    },
+    "schools": {
+      "district": "Washoe County School District",
+      "websiteUrl": "https://www.washoeschools.net",
+      "alertsUrl": "https://www.washoeschools.net",
+      "fallbackUrl": "https://www.washoeschools.net"
+    },
+    "smoke": {
+      "box": {
+        "lonMin": -120.05,
+        "latMin": 39.25,
+        "lonMax": -119.55,
+        "latMax": 39.85
+      }
+    },
+    "tides": {
+      "highTideAlertFt": 7,
+      "stationId": "9419750",
+      "stationName": "Crescent City, CA"
+    },
+    "tsunami": {
+      "capArea": "CA"
+    },
+    "uscg": {
+      "district": 11,
+      "listUrl": "https://www.navcen.uscg.gov/broadcast-notice-to-mariners-search-results?district=11&sector=0&date-range={START}--{END}&items_per_page=50",
+      "messageUrl": "https://www.navcen.uscg.gov/broadcast-notice-to-mariners-message?guid={GUID}",
+      "windowDays": 35
+    },
+    "weather": {
+      "latitude": 39.5296,
+      "longitude": -119.8138,
+      "nwsZone": "NVZ003"
+    },
+    "wildfire": {
+      "counties": [
+        "Washoe",
+        "Storey",
+        "Douglas",
+        "Carson City"
+      ],
+      "latitude": 39.5296,
+      "longitude": -119.8138,
+      "radiusKm": 150
+    }
+  },
+  "id": "reno-nv",
+  "profileId": "reno-nv",
+  "schemaVersion": "region-config/v1"
+}

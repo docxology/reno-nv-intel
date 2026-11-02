@@ -1,0 +1,87 @@
+name: Reno manuscript native review
+on:
+  push:
+    branches: [main]
+    paths: ['region.json', 'documents.json', 'configs/**', 'pages-data/**', 'scripts/**', 'docs/manuscript/**', 'docs/assets/**', 'review/**', 'package.json', 'bun.lock', '.github/workflows/manuscript.yml']
+  pull_request:
+    paths: ['region.json', 'documents.json', 'configs/**', 'pages-data/**', 'scripts/**', 'docs/manuscript/**', 'docs/assets/**', 'review/**', 'package.json', 'bun.lock', '.github/workflows/manuscript.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  manuscript:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # actions/checkout@v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # actions/checkout@v7.0.1
+        with:
+          repository: docxology/template
+          ref: c18dae54a07fe6ac3a7b1a1a274251c169a12e7a
+          path: .template
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # oven-sh/setup-bun@v2.2.0
+        with:
+          bun-version: '1.4.2'
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9
+        with:
+          version: '0.13.0'
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '24'
+      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
+      - run: bun install --frozen-lockfile
+      - name: Verify committed public inputs before native installation
+        run: bun run publication:check
+      - name: Prepare the pinned template environment
+        working-directory: .template
+        run: |
+          uv sync --frozen --no-default-groups --extra rendering --python 3.14
+          npm install --global npm@11.20.0
+          npm ci --ignore-scripts
+      - name: Install verified native tools
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-fonts-recommended texlive-latex-recommended texlive-latex-extra tex-gyre fonts-texgyre lmodern fonts-lmodern qpdf poppler-utils
+          sudo mktexlsr
+          for regional_font in texgyrepagella-regular.otf texgyrepagella-bold.otf texgyrepagella-italic.otf texgyrepagella-bolditalic.otf texgyreheros-regular.otf texgyreheros-bold.otf texgyreheros-italic.otf texgyreheros-bolditalic.otf lmmono10-regular.otf latinmodern-math.otf; do
+            if ! regional_font_path="$(kpsewhich "$regional_font")"; then
+              printf 'Required OpenType font missing: %s\n' "$regional_font"
+              exit 1
+            fi
+            test -n "$regional_font_path"
+            test -r "$regional_font_path"
+            printf 'Verified OpenType font: %s\n' "$regional_font"
+          done
+          render_bin="$RUNNER_TEMP/regional-native-tools"
+          mkdir "$render_bin"
+          cd "$render_bin"
+          curl --fail --location --max-time 180 --output pandoc.deb https://github.com/jgm/pandoc/releases/download/3.12.1/pandoc-3.12.1-1-amd64.deb
+          printf '%s\n' 'b4217ac7c54067c442f9d4cd38bcd0c184a43f3e7053431a12263a6f92a33ba2  pandoc.deb' > pandoc.sha256
+          sha256sum --check pandoc.sha256
+          sudo dpkg --install pandoc.deb
+          curl --fail --location --max-time 180 --output crossref.tar.xz https://github.com/lierdakil/pandoc-crossref/releases/download/v0.3.26/pandoc-crossref-Linux-X64.tar.xz
+          printf '%s\n' '83d09646629234dfcd3d267e28184f46b9d468e98508efb3542b014634bfe999  crossref.tar.xz' > crossref.sha256
+          sha256sum --check crossref.sha256
+          tar --extract --xz --file crossref.tar.xz
+          pandoc --version
+          "$render_bin/pandoc-crossref" --version
+          echo "$render_bin" >> "$GITHUB_PATH"
+          echo "REGION_TEMPLATE_ROOT=$GITHUB_WORKSPACE/.template" >> "$GITHUB_ENV"
+          echo "REGION_TEMPLATE_PYTHON=$GITHUB_WORKSPACE/.template/.venv/bin/python" >> "$GITHUB_ENV"
+          echo "PYTHONDONTWRITEBYTECODE=1" >> "$GITHUB_ENV"
+          echo "MPLCONFIGDIR=$RUNNER_TEMP/regional-matplotlib" >> "$GITHUB_ENV"
+      - run: bun run manuscript:check
+      - run: bun run manuscript:render
+      - run: bun run manuscript:validate-render
+      - name: Retain native outputs and failure diagnostics
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # actions/upload-artifact@v7.0.2
+        with:
+          name: reno-manuscript-template-review
+          path: |
+            output/manuscript-review/
+            output/.manuscript-review-build-*/
+            .template/output/region-intel-builds/
+          include-hidden-files: true
+          retention-days: 7

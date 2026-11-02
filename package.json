@@ -1,0 +1,52 @@
+{
+  "name": "reno-nv-intel",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Thin Reno, Nevada deployment of region-intel",
+  "license": "CC-BY-SA-4.0",
+  "scripts": {
+    "status": "bun run scripts/region.ts status",
+    "civic:profile": "bun run scripts/region.ts civic:profile",
+    "region:config": "bun run scripts/region.ts region:config",
+    "geo:intel": "bun run scripts/region.ts geo:intel",
+    "source-discovery": "bun run scripts/region.ts source-discovery",
+    "sources:check": "bun run scripts/region.ts sources:check",
+    "documents:acquire": "bun run scripts/region.ts documents:acquire",
+    "documents:check": "bun run scripts/region.ts documents:check",
+    "observations:seed": "bun run scripts/region.ts observations:seed",
+    "news": "bun run scripts/region.ts news",
+    "gov-meetings": "bun run scripts/region.ts gov-meetings",
+    "alerts": "bun run scripts/region.ts alerts",
+    "alerts:earthquake": "bun run scripts/region.ts alerts:earthquake",
+    "alerts:weather": "bun run scripts/region.ts alerts:weather",
+    "alerts:airquality": "bun run scripts/region.ts alerts:airquality",
+    "alerts:drought": "bun run scripts/region.ts alerts:drought",
+    "alerts:smoke": "bun run scripts/region.ts alerts:smoke",
+    "analytics": "bun run scripts/region.ts analytics",
+    "insights": "bun run scripts/region.ts insights",
+    "gui": "bun run scripts/region.ts gui",
+    "pages:export": "bun run scripts/region.ts pages:export",
+    "pages:validate": "bun run scripts/region.ts pages:validate",
+    "publication:check": "bun run scripts/region.ts publication:check",
+    "manuscript:check": "bun run scripts/region.ts manuscript:check",
+    "manuscript:hydrate": "bun run scripts/region.ts manuscript:hydrate",
+    "manuscript:render": "bun run scripts/region.ts manuscript:render",
+    "manuscript:validate-render": "bun run scripts/region.ts manuscript:validate-render",
+    "manuscript:bundle": "bun run scripts/region.ts manuscript:bundle",
+    "region": "bun run scripts/region.ts",
+    "typecheck": "bunx tsc --noEmit",
+    "test": "bun test tests/",
+    "validate": "bun run typecheck && bun run scripts/region.ts validate && bun test tests/ && bun run documents:check && bun run manuscript:check",
+    "release:check": "bun run validate && bun run manuscript:validate-render -- --bundle",
+    "weekly-check": "bun run scripts/region.ts weekly-check",
+    "documents:import": "bun run scripts/region.ts documents:import"
+  },
+  "dependencies": {
+    "region-intel": "github:docxology/region-intel#eed4cdb9e814a6cfc12ecb961611996378672bbf"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "bun-types": "1.3.9"
+  }
+}

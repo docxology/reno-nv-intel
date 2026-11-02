@@ -1,0 +1,232 @@
+{
+  "schemaVersion": "regional-observation-input/v1",
+  "profileId": "reno-nv",
+  "configurationSha256": "34866a30c3b16e6941c92a16eb5c3f010a6c08bd7ff9da6406b41ec0a668f8d8",
+  "capturedAt": "2026-11-01T23:59:10.342Z",
+  "observations": {
+    "profileId": "reno-nv",
+    "alerts": {
+      "assessedAt": "2026-11-01T23:57:12.738Z",
+      "eligibleMonitorCount": 5,
+      "unavailableMonitorCount": 0,
+      "coverage": "Only enabled monitors are represented; missing observations do not establish calm conditions",
+      "monitors": [
+        {
+          "key": "earthquake",
+          "level": "CALM",
+          "summary": "No qualifying earthquakes nearby",
+          "count": 0,
+          "availability": "available"
+        },
+        {
+          "key": "weather",
+          "level": "CALM",
+          "summary": "No active weather alerts",
+          "count": 0,
+          "availability": "available"
+        },
+        {
+          "key": "airquality",
+          "level": "CALM",
+          "summary": "Air quality AQI 21 (Good/Moderate)",
+          "count": 0,
+          "availability": "available"
+        },
+        {
+          "key": "drought",
+          "level": "WATCH",
+          "summary": "🔵 Dry conditions (D1)",
+          "count": 1,
+          "availability": "available"
+        },
+        {
+          "key": "smoke",
+          "level": "CALM",
+          "summary": "No mapped HMS plume; surface air quality not measured",
+          "count": 0,
+          "availability": "available"
+        }
+      ]
+    },
+    "news": [],
+    "meetings": {
+      "profileId": "reno-nv",
+      "sources": [
+        {
+          "sourceId": "reno-council",
+          "status": "empty",
+          "retrievedAt": "2026-11-01T23:41:33.483Z",
+          "documents": []
+        }
+      ]
+    },
+    "sourceChecks": {
+      "schemaVersion": "regional-source-checks/v1",
+      "profileId": "reno-nv",
+      "scope": "HTTP reachability only; no semantic, completeness or freshness acceptance",
+      "sources": [
+        {
+          "sourceId": "reno-title18",
+          "url": "https://www.reno.gov/Documents/Business%20and%20Development/Development%20Services/Zoning%20Code/Title%2018%20Final%20amended%2060326.pdf",
+          "checkedAt": "2026-11-01T23:38:39.923Z",
+          "status": "unavailable",
+          "httpStatus": 403
+        },
+        {
+          "sourceId": "reno-administrative",
+          "url": "https://library.municode.com/nv/reno/codes/administrative_code",
+          "checkedAt": "2026-11-01T23:38:40.655Z",
+          "status": "unavailable",
+          "httpStatus": 403
+        },
+        {
+          "sourceId": "reno-land-development",
+          "url": "https://library.municode.com/nv/reno/codes/land_development_code",
+          "checkedAt": "2026-11-01T23:38:40.922Z",
+          "status": "unavailable",
+          "httpStatus": 403
+        },
+        {
+          "sourceId": "reno-code-guidance",
+          "url": "https://www.reno.gov/government/departments/city-attorney/civil-division/faqs.php",
+          "checkedAt": "2026-11-01T23:38:41.138Z",
+          "status": "unavailable",
+          "httpStatus": 403
+        },
+        {
+          "sourceId": "reno-zoning",
+          "url": "https://www.reno.gov/business-development/development-services/zoning-code/index.php",
+          "checkedAt": "2026-11-01T23:38:41.451Z",
+          "status": "unavailable",
+          "httpStatus": 403
+        },
+        {
+          "sourceId": "reno-government",
+          "url": "https://www.reno.gov",
+          "checkedAt": "2026-11-01T23:38:41.630Z",
+          "status": "unavailable",
+          "httpStatus": 403
+        },
+        {
+          "sourceId": "reno-council",
+          "url": "https://reno.primegov.com/public/portal",
+          "checkedAt": "2026-11-01T23:38:41.861Z",
+          "status": "reachable",
+          "httpStatus": 200
+        },
+        {
+          "sourceId": "reno-calendar",
+          "url": "https://www.reno.gov/calendar/",
+          "checkedAt": "2026-11-01T23:38:42.476Z",
+          "status": "unavailable",
+          "httpStatus": 403
+        },
+        {
+          "sourceId": "reno-roads",
+          "url": "https://reno.gov/community/road-closures.php",
+          "checkedAt": "2026-11-01T23:38:42.663Z",
+          "status": "unavailable",
+          "httpStatus": 403
+        },
+        {
+          "sourceId": "nevada-roads",
+          "url": "https://www.nvroads.com",
+          "checkedAt": "2026-11-01T23:38:43.098Z",
+          "status": "reachable",
+          "httpStatus": 200
+        },
+        {
+          "sourceId": "nevada-roads-api",
+          "url": "https://www.nvroads.com/developers/doc",
+          "checkedAt": "2026-11-01T23:38:43.438Z",
+          "status": "reachable",
+          "httpStatus": 200
+        },
+        {
+          "sourceId": "ndot-travel",
+          "url": "https://www.dot.nv.gov/travel-info",
+          "checkedAt": "2026-11-01T23:38:43.682Z",
+          "status": "unavailable",
+          "httpStatus": 403
+        },
+        {
+          "sourceId": "nnph-air",
+          "url": "https://www.nnph.org/programs-and-services/air-quality/index.php",
+          "checkedAt": "2026-11-01T23:38:44.077Z",
+          "status": "unavailable",
+          "httpStatus": null
+        },
+        {
+          "sourceId": "nws-reno",
+          "url": "https://www.weather.gov/rev/",
+          "checkedAt": "2026-11-01T23:38:44.360Z",
+          "status": "unavailable",
+          "httpStatus": 403
+        },
+        {
+          "sourceId": "nws-zone",
+          "url": "https://forecast.weather.gov/MapClick.php?zoneid=NVZ003",
+          "checkedAt": "2026-11-01T23:38:44.599Z",
+          "status": "unavailable",
+          "httpStatus": 403
+        },
+        {
+          "sourceId": "usgs-earthquakes",
+          "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
+          "checkedAt": "2026-11-01T23:38:44.904Z",
+          "status": "reachable",
+          "httpStatus": 200
+        },
+        {
+          "sourceId": "drought-nevada",
+          "url": "https://droughtmonitor.unl.edu/CurrentMap/StateDroughtMonitor.aspx?NV",
+          "checkedAt": "2026-11-01T23:38:45.100Z",
+          "status": "reachable",
+          "httpStatus": 200
+        },
+        {
+          "sourceId": "trfma",
+          "url": "https://trfma.org/",
+          "checkedAt": "2026-11-01T23:38:46.547Z",
+          "status": "reachable",
+          "httpStatus": 200
+        },
+        {
+          "sourceId": "washoe-emergency",
+          "url": "https://www.washoecounty.gov/em/",
+          "checkedAt": "2026-11-01T23:38:47.569Z",
+          "status": "reachable",
+          "httpStatus": 200
+        },
+        {
+          "sourceId": "washoe-code",
+          "url": "https://www.washoecounty.gov/clerks/cco/county_code.php",
+          "checkedAt": "2026-11-01T23:38:48.186Z",
+          "status": "reachable",
+          "httpStatus": 200
+        },
+        {
+          "sourceId": "census-washoe",
+          "url": "https://tigerweb.geo.census.gov/tigerwebmain/Files/acs25/tigerweb_acs25_county_nv.html",
+          "checkedAt": "2026-11-01T23:38:48.439Z",
+          "status": "reachable",
+          "httpStatus": 200
+        },
+        {
+          "sourceId": "reno-newsroom",
+          "url": "https://www.reno.gov/news/index.php",
+          "checkedAt": "2026-11-01T23:38:49.388Z",
+          "status": "unavailable",
+          "httpStatus": 403
+        },
+        {
+          "sourceId": "reno-permits",
+          "url": "https://aca-prod.accela.com/ONE/Default.aspx",
+          "checkedAt": "2026-11-01T23:38:50.248Z",
+          "status": "reachable",
+          "httpStatus": 200
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "regional-manuscript/v1",
+  "title": "Composable Civic Evidence for Reno, Nevada",
+  "version": "0.1.0",
+  "status": "review-draft",
+  "authors": [
+    "Daniel Ari Friedman"
+  ],
+  "cover": {
+    "path": "docs/assets/reno-cover.png",
+    "alt": "Conceptual high-desert Reno cityscape and Truckee River beneath Sierra mountains, with subtle evidence-network lines; not a survey map or observation.",
+    "credit": "Original conceptual illustration generated with OpenAI image generation for this project; not an official map, photograph or measured scientific figure."
+  },
+  "authorOrcids": {
+    "Daniel Ari Friedman": "0000-0001-6232-9096"
+  }
+}
