@@ -14,7 +14,22 @@ jobs:
       - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # oven-sh/setup-bun@v2.2.0
         with:
           bun-version: '1.4.2'
-      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
+      - name: Install the recorded PDF extractor and frozen Linux dependencies
+        uses: mamba-org/setup-micromamba@f457c30a868e4760d3a6fcea5f25dc655b8edf39 # v3
+        id: pdf-tools
+        with:
+          micromamba-version: '2.10.0-0'
+          environment-name: regional-pdf
+          environment-file: configs/pdf-tools-linux-64.lock
+          init-shell: none
+          generate-run-shell: false
+          cache-environment: true
+      - name: Verify and select the recorded PDF extractor
+        shell: bash
+        run: |
+          pdf_tool_bin='${{ steps.pdf-tools.outputs.environment-path }}/bin'
+          "$pdf_tool_bin/pdftotext" -v
+          printf '%s\n' "$pdf_tool_bin" >> "$GITHUB_PATH"
       - run: bun install --frozen-lockfile
       - run: bunx playwright install --with-deps chromium
       - run: bun run validate

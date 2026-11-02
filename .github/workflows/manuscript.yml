@@ -28,7 +28,22 @@ jobs:
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
           node-version: '24'
-      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
+      - name: Install the recorded PDF extractor and frozen Linux dependencies
+        uses: mamba-org/setup-micromamba@f457c30a868e4760d3a6fcea5f25dc655b8edf39 # v3
+        id: pdf-tools
+        with:
+          micromamba-version: '2.10.0-0'
+          environment-name: regional-pdf
+          environment-file: configs/pdf-tools-linux-64.lock
+          init-shell: none
+          generate-run-shell: false
+          cache-environment: true
+      - name: Verify and select the recorded PDF extractor
+        shell: bash
+        run: |
+          pdf_tool_bin='${{ steps.pdf-tools.outputs.environment-path }}/bin'
+          "$pdf_tool_bin/pdftotext" -v
+          printf '%s\n' "$pdf_tool_bin" >> "$GITHUB_PATH"
       - run: bun install --frozen-lockfile
       - name: Verify committed public inputs before native installation
         run: bun run publication:check
