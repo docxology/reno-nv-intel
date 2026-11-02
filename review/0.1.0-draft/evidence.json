@@ -354,7 +354,7 @@
     "VERIFIED_AT": "2026-11-01T23:40:30.028Z",
     "EDITION_ID": "f687a3da4cad5ef36df9d242d53dc400570e93f675f907ac3391ff25c20e961a",
     "CORE_PIN": "0eb390bc804c5a3ae5304839187f914364d0bec3",
-    "EVIDENCE_FINGERPRINT": "2dd4d69f82c38a2a2893164857ccf3d60460535de5f368314b17fb75b1bb6104",
+    "EVIDENCE_FINGERPRINT": "60d4cc8cb3829f5111d610620763420c1be61e7c98bb58d4a50586bbdb7502f3",
     "CODE_MEDIAN_SECTIONS": "43",
     "CODE_MAX_SECTIONS": "57",
     "CODE_MIN_SECTIONS": "5",
@@ -431,8 +431,8 @@
       "bytes": 916
     },
     "docs/manuscript/08_appendix_formalism.md": {
-      "sha256": "9cd82bad6ec047594f27b3232fb95286d7d19a9b2f257b8f2abdd6f5789aafa6",
-      "bytes": 1697
+      "sha256": "c36aafe45fdfca997f7636b002c4c669f44b78c96450f4d4555b2e4962c87cfa",
+      "bytes": 1715
     },
     "docs/manuscript/99_references.md": {
       "sha256": "a0146629fe914d46423ad3b733e7c865ab26fc11f3a251e1d27405d58205ebe3",
@@ -456,7 +456,7 @@
     }
   },
   "rendererSha256": "9487afa025eadf7d3bb20ddaa042a17fffa2a0d18a39e2513a34cc89d1e6d955",
-  "inputFingerprint": "2dd4d69f82c38a2a2893164857ccf3d60460535de5f368314b17fb75b1bb6104",
+  "inputFingerprint": "60d4cc8cb3829f5111d610620763420c1be61e7c98bb58d4a50586bbdb7502f3",
   "limitations": [
     "Retained public PDF edition; not the full municipal code",
     "Physical PDF pages and nonempty extracted lines are extraction units, not legal sections",

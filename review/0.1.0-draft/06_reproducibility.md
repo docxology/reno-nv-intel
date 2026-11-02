@@ -5,7 +5,7 @@
 The input commitment is:
 
 ```text
-2dd4d69f82c38a2a2893164857ccf3d60460535de5f368314b17fb75b1bb6104
+60d4cc8cb3829f5111d610620763420c1be61e7c98bb58d4a50586bbdb7502f3
 ```
 
 The shared core pin is 0eb390bc804c5a3ae5304839187f914364d0bec3. The external template pin is c18dae54a07fe6ac3a7b1a1a274251c169a12e7a. The complete packet retains projected prose, bibliography, claim ledger, source commitments, page-level profile, CSV, three analytical figures in PNG/PDF/SVG, native PDF, extracted text and offline HTML assets. Reproducing source-derived counts requires the public retained PDF and the recorded extraction contract. Acquisition is a separate network operation; it should not be silently repeated during an offline acceptance build.

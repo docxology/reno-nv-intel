@@ -52,7 +52,7 @@ diagram, not a measured civic outcome.
 
 10 Appendix: Formal Contracts and Worked Records                                                   10
 
-11 References                                                                                      10
+11 References                                                                                      11
 
 
 
@@ -324,7 +324,7 @@ view possible.
 8.1   Frozen public inputs
 The input commitment is:
 
-2dd4d69f82c38a2a2893164857ccf3d60460535de5f368314b17fb75b1bb6104
+60d4cc8cb3829f5111d610620763420c1be61e7c98bb58d4a50586bbdb7502f3
 
 The shared core pin is 0eb390bc804c5a3ae5304839187f914364d0bec3. The external template pin
 is c18dae54a07fe6ac3a7b1a1a274251c169a12e7a. The complete packet retains projected prose,
@@ -422,6 +422,15 @@ Replay acceptance requires the configured source identity, original PDF hash, ph
 membership and exact extracted texts to agree with the retained receipt. Publication corre-
 spondence additionally requires the selected Git reference to contain the same public input and
 native packet bytes. Neither relation implies semantic truth or continuing legal currency.
+
+
+
+
+                                                10
+Figure 4: Recorded source structure, selected operating policy and native rendering support
+separate claims. Human review and legal currency are outside these mechanical checks.
+
+
 The claim ledger records the scope and unestablished outcomes alongside each evidence loca-
 tor. This is a practical traceability device rather than a formal proof of correctness. It makes
 disagreements locatable: an extraction mismatch, a source-identity change and a substantive
@@ -431,14 +440,8 @@ legal objection should not be collapsed into one undifferentiated build result.
 11    References
 Emily M. Bender and Batya Friedman. Data statements for natural language processing: To-
  ward mitigating system bias and enabling better science. Transactions of the Association for
-
-                                                10
-Figure 4: Recorded source structure, selected operating policy and native rendering support
-separate claims. Human review and legal currency are outside these mechanical checks.
-
-
-  Computational Linguistics, 6:587–604, 2018. doi: 10.1162/tacl_a_00041. URL https://aclantho
-  logy.org/Q18-1041/.
+ Computational Linguistics, 6:587–604, 2018. doi: 10.1162/tacl_a_00041. URL https://aclantho
+ logy.org/Q18-1041/.
 City of Reno. Annexation and land development code of the city of reno: Title 18, 2026a. URL
   https://www.reno.gov/Documents/Business%20and%20Development/Development%20
   Services/Zoning%20Code/Title%2018%20Final%20amended%2060326.pdf. Cover states
@@ -457,7 +460,10 @@ Geir Kjetil Sandve, Anton Nekrutenko, James Taylor, and Eivind Hovig. Ten simple
  reproducible computational research. PLOS Computational Biology, 9(10):e1003285, 2013. doi:
  10.1371/journal.pcbi.1003285. URL https://journals.plos.org/ploscompbiol/article?id=10.1
  371/journal.pcbi.1003285.
-Mark D. Wilkinson, Michel Dumontier, IJsbrand Jan Aalbersberg, et al. The FAIR guiding prin-
+
+
+                                              11
+Mark D. Wilkinson, Michel Dumontier, IJsbrand Jan Aalbersberg, et al. The FAIR guiding prin-
  ciples for scientific data management and stewardship. Scientific Data, 3:160018, 2016. doi:
  10.1038/sdata.2016.18. URL https://www.nature.com/articles/sdata201618.
 World Wide Web Consortium. PROV-DM: The PROV data model. W3c recommendation, World
@@ -468,5 +474,5 @@ World Wide Web Consortium. Data on the web best practices. W3c recommendation, W
 
 
 
-                                             11
+                                             12
 

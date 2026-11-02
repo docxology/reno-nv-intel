@@ -10,6 +10,6 @@ The profile reports the minimum, median and maximum of the complete sequence $(L
 
 Replay acceptance requires the configured source identity, original PDF hash, physical page membership and exact extracted texts to agree with the retained receipt. Publication correspondence additionally requires the selected Git reference to contain the same public input and native packet bytes. Neither relation implies semantic truth or continuing legal currency.
 
-![Recorded source structure, selected operating policy and native rendering support separate claims. Human review and legal currency are outside these mechanical checks.](../output/figures/evidence-boundaries.png){#fig:evidence-boundaries}
+![Recorded source structure, selected operating policy and native rendering support separate claims. Human review and legal currency are outside these mechanical checks.](../output/figures/evidence-boundaries.png){#fig:evidence-boundaries latex-placement=H}
 
 The claim ledger records the scope and unestablished outcomes alongside each evidence locator. This is a practical traceability device rather than a formal proof of correctness. It makes disagreements locatable: an extraction mismatch, a source-identity change and a substantive legal objection should not be collapsed into one undifferentiated build result.
