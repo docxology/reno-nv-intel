@@ -19,3 +19,10 @@ The complete all-page CSV accompanies this figure. A page with many extracted li
 The source catalog contains {{SOURCE_COUNT}} explicitly selected entries. The monitor roster contains {{MONITOR_COUNT}} enabled adapters. Source reachability receipts, when retained, report each check's original clock and HTTP result. They do not turn a reachable landing page into a parsed operational feed. Initial public probes of the Municode administrative and land-development collections returned access errors. The shared HTTP client also returned 403 for Title 18; its retained bytes came from an explicit import of the separately recorded bounded curl capture. The Title 18 document is therefore published as a separate document collection, with no eCode360 identity and no claim of full municipal-code capture.
 
 The live dashboard, retained observations and native manuscript are distinct artifacts. Rebuilding the static site can reproduce the document search and review packet without a new network acquisition. A separately run collection may discover later observations, including unavailable states; it does not revise this manuscript's retained document clock until a deliberate new evidence build occurs.
+
+
+### Retained monitor clocks and a metadata defect
+
+The initial batch was assessed at 2026-11-01T23:57:12.738Z. Its original source-health receipts distinguish check/retrieval clocks from AirNow's 2026-11-01T23:00:00.000Z observation, the drought product dated 2026-10-27 and the HMS product dated 2026-11-01. The retained public rows preserve these original fields, provider identity and status; rendering does not turn them into current observations. Missing or stale clock evidence cannot support an available row.
+
+The original weather report records forecastZone NVZ003, but its health receipt URL incorrectly names CAZ101. That historical metadata is retained unchanged and is not requested-zone evidence. The shared runner now uses the collector's per-call URL resolver for future health receipts. This correction does not retroactively repair the old receipt or advance its clock.

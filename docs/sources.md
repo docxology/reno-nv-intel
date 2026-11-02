@@ -13,3 +13,10 @@ Source attribution, document titles and third-party rights travel with retained 
 ## Transport-specific observation
 
 The shared HTTP fetcher returned 403 for the City PDF in the initial deployment. A separately recorded, bounded, unauthenticated curl download succeeded. `documents:import -- --source output/document-capture` admits its profile, exact source ID/URL, original clock, transport, HTTP status and PDF hash before replay. These are operator-recorded provenance backed by the actual command evidence, not a retrospective pass for the failed shared fetch. The public source checks retain the 403 result. Pages serves the exact retained PDF so its search cannot silently point into a later upstream edition.
+
+
+### Retained monitor clocks and a metadata defect
+
+The initial batch was assessed at 2026-11-01T23:57:12.738Z. Its original source-health receipts distinguish check/retrieval clocks from AirNow's 2026-11-01T23:00:00.000Z observation, the drought product dated 2026-10-27 and the HMS product dated 2026-11-01. The retained public rows preserve these original fields, provider identity and status; rendering does not turn them into current observations. Missing or stale clock evidence cannot support an available row.
+
+The original weather report records forecastZone NVZ003, but its health receipt URL incorrectly names CAZ101. That historical metadata is retained unchanged and is not requested-zone evidence. The shared runner now uses the collector's per-call URL resolver for future health receipts. This correction does not retroactively repair the old receipt or advance its clock.

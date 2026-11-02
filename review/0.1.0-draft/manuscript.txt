@@ -31,27 +31,28 @@ diagram, not a measured civic outcome.
 5   Results                                                                                         5
     5.1 Retained document edition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       5
     5.2 Composition and source availability . . . . . . . . . . . . . . . . . . . . . . . . .       6
+        5.2.1 Retained monitor clocks and a metadata defect . . . . . . . . . . . . . . .           6
 
-6   Discussion                                                                                      6
-    6.1 Composability requires typed limits . . . . . . . . . . . . . . . . . . . . . . . . .       6
+6   Discussion                                                                                      7
+    6.1 Composability requires typed limits . . . . . . . . . . . . . . . . . . . . . . . . .       7
     6.2 Absence and operational interpretation . . . . . . . . . . . . . . . . . . . . . . .        7
 
 7   Limitations, Ethics, and Threats to Validity                                                    7
     7.1 Data statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      7
-    7.2 Rights, privacy and automated assistance . . . . . . . . . . . . . . . . . . . . . .        7
+    7.2 Rights, privacy and automated assistance . . . . . . . . . . . . . . . . . . . . . .        8
     7.3 Preparation and responsibility . . . . . . . . . . . . . . . . . . . . . . . . . . . .      8
     7.4 Unestablished outcomes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        8
 
 8   Reproducibility and Artifact Specification                                                      8
     8.1 Frozen public inputs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      8
     8.2 New observations and version changes . . . . . . . . . . . . . . . . . . . . . . .          9
-    8.3 Validation scope . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    9
+    8.3 Validation scope . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   10
 
-9   Conclusion                                                                                      9
+9   Conclusion                                                                                     10
 
 10 Appendix: Formal Contracts and Worked Records                                                   10
 
-11 References                                                                                      11
+11 References                                                                                      10
 
 
 
@@ -123,7 +124,7 @@ bytes. No social, causal or model-performance result is asserted.
 4.1   Ownership and configuration
 The Reno repository contains configuration, public source evidence, manuscript sources, ac-
 ceptance tests, workflows and a small importer. Shared methods are imported from the full
-commit eed4cdb9e814a6cfc12ecb961611996378672bbf. The deployment identity is reno-nv. Its
+commit 0eb390bc804c5a3ae5304839187f914364d0bec3. The deployment identity is reno-nv. Its
 geographic anchor and rectangular watch extent are engineering parameters around Reno; they
 are not surveyed city boundaries. Washoe County FIPS 32031 selects county-level drought ob-
 servations, which must not be described as a city-only measurement. The NWS policy uses
@@ -208,7 +209,7 @@ or a chapter boundary. Neither condition identifies substantive importance. The 
 statistics summarize this single retained edition and extraction procedure; they do not support
 a population confidence interval or a temporal trend.
 
-5.2   Composition and source availability
+5.2     Composition and source availability
 The source catalog contains 23 explicitly selected entries. The monitor roster contains 5 enabled
 adapters. Source reachability receipts, when retained, report each check’s original clock and
 HTTP result. They do not turn a reachable landing page into a parsed operational feed. Initial
@@ -223,6 +224,19 @@ acquisition. A separately run collection may discover later observations, includ
 states; it does not revise this manuscript’s retained document clock until a deliberate new evi-
 dence build occurs.
 
+5.2.1    Retained monitor clocks and a metadata defect
+The initial batch was assessed at 2026-11-01T23:57:12.738Z. Its original source-health receipts
+distinguish check/retrieval clocks from AirNow’s 2026-11-01T23:00:00.000Z observation, the
+drought product dated 2026-10-27 and the HMS product dated 2026-11-01. The retained public
+rows preserve these original fields, provider identity and status; rendering does not turn them
+into current observations. Missing or stale clock evidence cannot support an available row.
+The original weather report records forecastZone NVZ003, but its health receipt URL incorrectly
+
+                                               6
+names CAZ101. That historical metadata is retained unchanged and is not requested-zone ev-
+idence. The shared runner now uses the collector’s per-call URL resolver for future health re-
+ceipts. This correction does not retroactively repair the old receipt or advance its clock.
+
 
 6     Discussion
 6.1   Composability requires typed limits
@@ -230,9 +244,7 @@ The useful generalization is a shared method that preserves source-specific mean
 collection and a structured eCode360 corpus have different units and different validation oppor-
 tunities. Treating one as the other would produce superficially uniform counts while obscuring
 a scientific limitation. This implementation instead shares bounded transport, filesystem cus-
-
-                                               6
-tody, transaction semantics, publication correspondence and native rendering while making
+tody, transaction semantics, publication correspondence and native rendering while making
 document units explicit.
 This distinction also clarifies thin orchestration. Reno owns the source selection and policy;
 it does not copy a scraper or a renderer. Provider support evolves in the core, while a full
@@ -267,7 +279,11 @@ tables and illustrations. The administrative code, later ordinances, other title
 and county regulations are not implied members. Washoe County is a separate jurisdiction even
 where it provides regional services. The source catalog is a curated engineering selection, not a
 complete census of public information.
-The acquisition records technical provenance, not legal authority. A publisher may update a file
+
+
+
+                                                 7
+The acquisition records technical provenance, not legal authority. A publisher may update a file
 at the same URL, and later amendments may exist elsewhere. The stated cover date is reported
 as such. It is not a statement that the retained text includes every amendment as of acquisition.
 A preflight qpdf check of the publisher PDF returned a stream warning (exit 3); the original
@@ -279,10 +295,7 @@ sions.
 7.2   Rights, privacy and automated assistance
 The project preserves attribution and source identity. Its repository license covers original
 project contributions and does not grant rights over third-party illustrations, marks, linked
-
-
-                                                 7
-websites or incorporated material. The cover is original generated conceptual artwork, cred-
+websites or incorporated material. The cover is original generated conceptual artwork, cred-
 ited separately and not presented as a map or photograph. Analytical figures are deterministic
 transformations of retained page counts. No resident-level profile, private record, hidden iden-
 tifier or access-control bypass is part of this study.
@@ -311,13 +324,16 @@ view possible.
 8.1   Frozen public inputs
 The input commitment is:
 
-40297038beeb47cfed581606a4ba88beb3e9a707ac27fc2a10ee4519f95a7769
+2dd4d69f82c38a2a2893164857ccf3d60460535de5f368314b17fb75b1bb6104
 
-The shared core pin is eed4cdb9e814a6cfc12ecb961611996378672bbf. The external template pin
+The shared core pin is 0eb390bc804c5a3ae5304839187f914364d0bec3. The external template pin
 is c18dae54a07fe6ac3a7b1a1a274251c169a12e7a. The complete packet retains projected prose,
 bibliography, claim ledger, source commitments, page-level profile, CSV, three analytical fig-
 ures in PNG/PDF/SVG, native PDF, extracted text and offline HTML assets. Reproducing
-source-derived counts requires the public retained PDF and the recorded extraction contract.
+
+
+                                                 8
+source-derived counts requires the public retained PDF and the recorded extraction contract.
 Acquisition is a separate network operation; it should not be silently repeated during an offline
 acceptance build.
 
@@ -330,9 +346,7 @@ bun run publication:check
 bun run pages:export
 bun run pages:validate -- .pages
 
-
-                                                 8
-To create a new native edition, configure the actual pinned template checkout and its frozen
+To create a new native edition, configure the actual pinned template checkout and its frozen
 rendering environment, install the documented native tools, then run:
 
 bun run manuscript:bundle
@@ -364,7 +378,11 @@ requires new input commitments and a new rendered packet. Exact Git publication 
 compare the public working bytes against HEAD or the staged index; they neither stage files
 nor publish by themselves.
 
-8.3   Validation scope
+
+
+
+                                               9
+8.3   Validation scope
 Meaningful negative controls alter the input that a check is supposed to protect: change original
 PDF bytes, rehash edited page text, remove a page, change a source URL, exchange a profile,
 add an unexpected published member or modify a tracked native asset. Such cases must fail.
@@ -380,9 +398,7 @@ pages, derives a complete descriptive extraction profile and publishes search an
 artifacts from the same evidence. Local identity and selected national monitors remain explicit
 configuration. The design makes the accessible document useful without representing it as a
 complete current municipal code.
-
-                                               9
-The resulting review packet supports technical inspection and further scholarly review. Contin-
+The resulting review packet supports technical inspection and further scholarly review. Contin-
 uing legal currency, interpretive validity, accessibility, model-answer quality and public useful-
 ness require additional evidence. Future additions should enter through shared, tested meth-
 ods and explicitly admitted local policy rather than copied implementations or inherited obser-
@@ -406,27 +422,23 @@ Replay acceptance requires the configured source identity, original PDF hash, ph
 membership and exact extracted texts to agree with the retained receipt. Publication corre-
 spondence additionally requires the selected Git reference to contain the same public input and
 native packet bytes. Neither relation implies semantic truth or continuing legal currency.
-
-
-
-
-Figure 4: Recorded source structure, selected operating policy and native rendering support
-separate claims. Human review and legal currency are outside these mechanical checks.
-
 The claim ledger records the scope and unestablished outcomes alongside each evidence loca-
 tor. This is a practical traceability device rather than a formal proof of correctness. It makes
 disagreements locatable: an extraction mismatch, a source-identity change and a substantive
 legal objection should not be collapsed into one undifferentiated build result.
 
 
-
-
-                                                10
-11   References
+11    References
 Emily M. Bender and Batya Friedman. Data statements for natural language processing: To-
  ward mitigating system bias and enabling better science. Transactions of the Association for
- Computational Linguistics, 6:587–604, 2018. doi: 10.1162/tacl_a_00041. URL https://aclantho
- logy.org/Q18-1041/.
+
+                                                10
+Figure 4: Recorded source structure, selected operating policy and native rendering support
+separate claims. Human review and legal currency are outside these mechanical checks.
+
+
+  Computational Linguistics, 6:587–604, 2018. doi: 10.1162/tacl_a_00041. URL https://aclantho
+  logy.org/Q18-1041/.
 City of Reno. Annexation and land development code of the city of reno: Title 18, 2026a. URL
   https://www.reno.gov/Documents/Business%20and%20Development/Development%20
   Services/Zoning%20Code/Title%2018%20Final%20amended%2060326.pdf. Cover states

@@ -353,8 +353,8 @@
     "MONITOR_COUNT": "5",
     "VERIFIED_AT": "2026-11-01T23:40:30.028Z",
     "EDITION_ID": "f687a3da4cad5ef36df9d242d53dc400570e93f675f907ac3391ff25c20e961a",
-    "CORE_PIN": "eed4cdb9e814a6cfc12ecb961611996378672bbf",
-    "EVIDENCE_FINGERPRINT": "40297038beeb47cfed581606a4ba88beb3e9a707ac27fc2a10ee4519f95a7769",
+    "CORE_PIN": "0eb390bc804c5a3ae5304839187f914364d0bec3",
+    "EVIDENCE_FINGERPRINT": "2dd4d69f82c38a2a2893164857ccf3d60460535de5f368314b17fb75b1bb6104",
     "CODE_MEDIAN_SECTIONS": "43",
     "CODE_MAX_SECTIONS": "57",
     "CODE_MIN_SECTIONS": "5",
@@ -387,11 +387,11 @@
       "bytes": 3561
     },
     "package.json": {
-      "sha256": "7ab0c3b7e57f1a9ac54630ada34c871fa949ffa4e12b919078a0a4e4128c13b5",
+      "sha256": "da4fafb964f1137eabcfd7b783a7295b6ec3595dc4db8a3ae60ef26985be778d",
       "bytes": 2694
     },
     "bun.lock": {
-      "sha256": "64d69adacb8af976da73097f3fc61ccbe2314bfca0bb8d37ac2c80480e3db0d1",
+      "sha256": "bbc5c6157321b7148dbcaff31a3a6f1ceba7ab2cfa3e9f0eefd684ffd5df77a4",
       "bytes": 8944
     },
     "docs/manuscript/config.json": {
@@ -411,8 +411,8 @@
       "bytes": 4130
     },
     "docs/manuscript/03_results.md": {
-      "sha256": "620ac78be656760d5911bd51461f9e5d21de40f5380dda0096c6f27ab892fc47",
-      "bytes": 2762
+      "sha256": "2b32d53bb8fad61538202826564abe857105e5af034ec5e2a3a08646bcc77a0c",
+      "bytes": 3652
     },
     "docs/manuscript/04_discussion.md": {
       "sha256": "2da03a14a7357474e30b4e6bc9317abfef18e6045b9d426afcc39d0f6fe1794d",
@@ -451,12 +451,12 @@
       "bytes": 3324632
     },
     "pages-data/regional-observations.json": {
-      "sha256": "005dff9e0b3a34bf47aa9d35bc2bbf156c47cb0b38113d889b9cff1d0a7a779a",
-      "bytes": 7698
+      "sha256": "dee8112936daa6e8e27d07e37c53fec764233f44c8afb9532d5a6f3ade22e77d",
+      "bytes": 11452
     }
   },
   "rendererSha256": "9487afa025eadf7d3bb20ddaa042a17fffa2a0d18a39e2513a34cc89d1e6d955",
-  "inputFingerprint": "40297038beeb47cfed581606a4ba88beb3e9a707ac27fc2a10ee4519f95a7769",
+  "inputFingerprint": "2dd4d69f82c38a2a2893164857ccf3d60460535de5f368314b17fb75b1bb6104",
   "limitations": [
     "Retained public PDF edition; not the full municipal code",
     "Physical PDF pages and nonempty extracted lines are extraction units, not legal sections",

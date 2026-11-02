@@ -2,49 +2,131 @@
   "schemaVersion": "regional-observation-input/v1",
   "profileId": "reno-nv",
   "configurationSha256": "34866a30c3b16e6941c92a16eb5c3f010a6c08bd7ff9da6406b41ec0a668f8d8",
-  "capturedAt": "2026-11-01T23:59:10.342Z",
+  "capturedAt": "2026-11-02T01:08:01.350Z",
   "observations": {
     "profileId": "reno-nv",
     "alerts": {
       "assessedAt": "2026-11-01T23:57:12.738Z",
       "eligibleMonitorCount": 5,
       "unavailableMonitorCount": 0,
-      "coverage": "Only enabled monitors are represented; missing observations do not establish calm conditions",
+      "coverage": "Only enabled monitors are represented. Source-health clocks and status are retained as originally assessed, not refreshed by publication; missing or stale clock evidence does not establish calm conditions",
       "monitors": [
         {
           "key": "earthquake",
           "level": "CALM",
           "summary": "No qualifying earthquakes nearby",
           "count": 0,
-          "availability": "available"
+          "availability": "available",
+          "sourceHealth": {
+            "source": "USGS Earthquake",
+            "status": "empty",
+            "checkedAt": "2026-11-01T23:57:12.738Z",
+            "fetchedAt": "2026-11-01T23:57:12.408Z",
+            "timestampBasis": "retrieval",
+            "observationAgeMs": 330,
+            "observationFreshness": "fresh",
+            "itemCount": 0,
+            "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson",
+            "provenance": "USGS all-earthquakes past-hour GeoJSON feed; M4+ within 200 km",
+            "ageMs": 330,
+            "freshness": "fresh",
+            "freshnessWindowMs": 3600000
+          }
         },
         {
           "key": "weather",
           "level": "CALM",
           "summary": "No active weather alerts",
           "count": 0,
-          "availability": "available"
+          "availability": "available",
+          "sourceHealth": {
+            "source": "NWS Weather",
+            "status": "empty",
+            "checkedAt": "2026-11-01T23:57:12.738Z",
+            "fetchedAt": "2026-11-01T23:57:12.608Z",
+            "timestampBasis": "retrieval",
+            "observationAgeMs": 130,
+            "observationFreshness": "fresh",
+            "itemCount": 0,
+            "url": "https://api.weather.gov/alerts/active?zone=CAZ101",
+            "provenance": "NWS active alerts",
+            "ageMs": 130,
+            "freshness": "fresh",
+            "freshnessWindowMs": 3600000
+          }
         },
         {
           "key": "airquality",
           "level": "CALM",
           "summary": "Air quality AQI 21 (Good/Moderate)",
           "count": 0,
-          "availability": "available"
+          "availability": "available",
+          "sourceHealth": {
+            "source": "EPA AirNow",
+            "status": "ok",
+            "checkedAt": "2026-11-01T23:57:12.738Z",
+            "fetchedAt": "2026-11-01T23:57:12.729Z",
+            "observedAt": "2026-11-01T23:00:00.000Z",
+            "timestampBasis": "observation",
+            "observationAgeMs": 3432738,
+            "observationFreshness": "fresh",
+            "itemCount": 1,
+            "url": "https://files.airnowtech.org/airnow/today/airnowlatest_pm25aqi.kml",
+            "provenance": "EPA AirNow public KML; keyed ZIP API fallback not required",
+            "ageMs": 9,
+            "freshness": "fresh",
+            "freshnessWindowMs": 7200000
+          }
         },
         {
           "key": "drought",
           "level": "WATCH",
           "summary": "🔵 Dry conditions (D1)",
           "count": 1,
-          "availability": "available"
+          "availability": "available",
+          "sourceHealth": {
+            "source": "USDM Drought",
+            "status": "ok",
+            "checkedAt": "2026-11-01T23:57:12.738Z",
+            "fetchedAt": "2026-11-01T23:57:12.632Z",
+            "observedAt": "2026-10-27T00:00:00Z",
+            "productDate": "2026-10-27",
+            "validUntil": "2026-11-02T23:59:59Z",
+            "timestampBasis": "product",
+            "observationAgeMs": 518232738,
+            "observationFreshness": "fresh",
+            "itemCount": 6,
+            "url": "https://usdmdataservices.unl.edu/api/CountyStatistics/GetDroughtSeverityStatisticsByAreaPercent?aoi=32031&startdate={START}&enddate={END}&statisticsType=2",
+            "provenance": "US Drought Monitor county area-percent CSV (Washoe FIPS 32031)",
+            "ageMs": 106,
+            "freshness": "fresh",
+            "freshnessWindowMs": 864000000
+          }
         },
         {
           "key": "smoke",
           "level": "CALM",
           "summary": "No mapped HMS plume; surface air quality not measured",
           "count": 0,
-          "availability": "available"
+          "availability": "available",
+          "sourceHealth": {
+            "source": "HRRR Smoke",
+            "status": "empty",
+            "checkedAt": "2026-11-01T23:57:12.738Z",
+            "fetchedAt": "2026-11-01T23:57:12.390Z",
+            "observedAt": "2026-11-01T00:00:00Z",
+            "productDate": "2026-11-01",
+            "validUntil": "2026-11-02T00:00:00.000Z",
+            "timestampBasis": "product",
+            "observationAgeMs": 86232738,
+            "observationFreshness": "fresh",
+            "itemCount": 0,
+            "url": "https://satepsanone.nesdis.noaa.gov/pub/FIRE/web/HMS/Smoke_Polygons/Shapefile/%7BY%7D/%7BM%7D/hms_smoke%7BYMD%7D.zip",
+            "provenance": "NOAA HMS smoke polygons",
+            "ageMs": 348,
+            "freshness": "fresh",
+            "freshnessWindowMs": 86400000
+          }
         }
       ]
     },
