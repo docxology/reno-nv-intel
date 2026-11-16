@@ -353,8 +353,8 @@
     "MONITOR_COUNT": "5",
     "VERIFIED_AT": "2026-11-01T23:40:30.028Z",
     "EDITION_ID": "f687a3da4cad5ef36df9d242d53dc400570e93f675f907ac3391ff25c20e961a",
-    "CORE_PIN": "0eb390bc804c5a3ae5304839187f914364d0bec3",
-    "EVIDENCE_FINGERPRINT": "60d4cc8cb3829f5111d610620763420c1be61e7c98bb58d4a50586bbdb7502f3",
+    "CORE_PIN": "51b18faeec1454e80a533795c6e3859eaeb5fc9b",
+    "EVIDENCE_FINGERPRINT": "e054f3ea66ca3cae1642a0d7849d0e03236f007c2618da36fab2be90524ecc53",
     "CODE_MEDIAN_SECTIONS": "43",
     "CODE_MAX_SECTIONS": "57",
     "CODE_MIN_SECTIONS": "5",
@@ -387,12 +387,12 @@
       "bytes": 3561
     },
     "package.json": {
-      "sha256": "da4fafb964f1137eabcfd7b783a7295b6ec3595dc4db8a3ae60ef26985be778d",
+      "sha256": "3e48044630cbc2e4cf3bb19609b9817e9a37b04b03b6a5d6844400193380aba8",
       "bytes": 2694
     },
     "bun.lock": {
-      "sha256": "bbc5c6157321b7148dbcaff31a3a6f1ceba7ab2cfa3e9f0eefd684ffd5df77a4",
-      "bytes": 8944
+      "sha256": "639d4784ab63de615f07190cde2d48be3fd1f08209369608879ad85490273826",
+      "bytes": 8735
     },
     "docs/manuscript/config.json": {
       "sha256": "c9769d39c7a73a13ebc7c83e07f640c10795270637b6de276828e584257a671b",
@@ -456,7 +456,7 @@
     }
   },
   "rendererSha256": "9487afa025eadf7d3bb20ddaa042a17fffa2a0d18a39e2513a34cc89d1e6d955",
-  "inputFingerprint": "60d4cc8cb3829f5111d610620763420c1be61e7c98bb58d4a50586bbdb7502f3",
+  "inputFingerprint": "e054f3ea66ca3cae1642a0d7849d0e03236f007c2618da36fab2be90524ecc53",
   "limitations": [
     "Retained public PDF edition; not the full municipal code",
     "Physical PDF pages and nonempty extracted lines are extraction units, not legal sections",

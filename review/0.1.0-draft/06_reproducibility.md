@@ -5,10 +5,10 @@
 The input commitment is:
 
 ```text
-60d4cc8cb3829f5111d610620763420c1be61e7c98bb58d4a50586bbdb7502f3
+e054f3ea66ca3cae1642a0d7849d0e03236f007c2618da36fab2be90524ecc53
 ```
 
-The shared core pin is 0eb390bc804c5a3ae5304839187f914364d0bec3. The external template pin is c18dae54a07fe6ac3a7b1a1a274251c169a12e7a. The complete packet retains projected prose, bibliography, claim ledger, source commitments, page-level profile, CSV, three analytical figures in PNG/PDF/SVG, native PDF, extracted text and offline HTML assets. Reproducing source-derived counts requires the public retained PDF and the recorded extraction contract. Acquisition is a separate network operation; it should not be silently repeated during an offline acceptance build.
+The shared core pin is 51b18faeec1454e80a533795c6e3859eaeb5fc9b. The external template pin is c18dae54a07fe6ac3a7b1a1a274251c169a12e7a. The complete packet retains projected prose, bibliography, claim ledger, source commitments, page-level profile, CSV, three analytical figures in PNG/PDF/SVG, native PDF, extracted text and offline HTML assets. Reproducing source-derived counts requires the public retained PDF and the recorded extraction contract. Acquisition is a separate network operation; it should not be silently repeated during an offline acceptance build.
 
 ```sh
 bun install --frozen-lockfile
