@@ -1,0 +1,22 @@
+# Template reader build metadata. The archived native packet uses config.json.
+paper:
+  title: "Composable Civic Evidence for Reno, Nevada"
+  subtitle: "Retained regional evidence and operating boundaries"
+  version: "0.1.0"
+  date: "2026-11-01"
+  cover:
+    image: "figures/cover.png"
+    alt: "Conceptual Reno cityscape and Truckee River below the Sierra Nevada."
+authors:
+  - name: "Daniel Ari Friedman"
+    orcid: "0000-0001-6232-9096"
+metadata:
+  language: "en"
+  geometry: "margin=25mm"
+render:
+  formats:
+    pdf: true
+    html: true
+    slides: false
+    docx: false
+    epub: false

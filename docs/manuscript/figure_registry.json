@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "figures": [
+    {
+      "label": "fig:architecture",
+      "filename": "architecture.png",
+      "alt_text": "Flow diagram from Reno's retained documents and policy through shared methods to the review outputs."
+    },
+    {
+      "label": "fig:corpus-profile",
+      "filename": "corpus-profile.png",
+      "alt_text": "Distribution of nonempty extracted lines per physical PDF page, with the twelve largest pages labeled."
+    },
+    {
+      "label": "fig:evidence-boundaries",
+      "filename": "evidence-boundaries.png",
+      "alt_text": "Diagram separating what source replay, policy selection, native rendering, and human review can establish."
+    }
+  ]
+}
