@@ -1,11 +1,49 @@
-# Reproduction and native rendering
+# Operations and offline verification
 
-Install Bun 1.4.2 and Poppler. Run the README's frozen acceptance sequence. `documents:check` rehashes the retained original PDF and reruns pdftotext -layout with UTF-8. Tool drift that changes page text is a visible failure; never silently rebaseline. `publication:check` verifies actual HEAD or `--staged` blobs against working public inputs and the complete native packet.
+The consumer pins Bun 1.4.2 and the shared engine through its frozen lockfile.
+The [deployment](../region.json) selects the regional configuration, civic
+profile, and monitor allowlist. The [source policy](sources.md) explains their
+limits. The native commands run against retained public inputs and their
+archived receipts.
 
-Native rendering uses docxology/template commit c18dae54a07fe6ac3a7b1a1a274251c169a12e7a. Prepare its frozen Python 3.14 rendering environment and documented npm lockfile assets. Its own toolchain controls that external project. Install XeLaTeX, TeX Gyre and Latin Modern OpenType fonts, qpdf, Poppler, Pandoc 3.12.1 and pandoc-crossref v0.3.26. Set REGION_TEMPLATE_ROOT and REGION_TEMPLATE_PYTHON; use external caches and TMPDIR when working in GitVault. Then run `bun run manuscript:bundle` and `bun run manuscript:validate-render -- --bundle`. The workflow records exact release hashes for native binaries and retains failure output.
+## Local checks
 
-The review packet contains manuscript.pdf, manuscript.txt, complete web/index.html plus offline assets, evidence.json, review-receipt.json, template-render.json, bibliography, ledger, projected sources, all-page CSV/profile, cover and three figures in PNG/PDF/SVG. It is a review draft. PDF/UA, legal currency, scientific approval and civic impact are separate acceptance.
+Install Bun 1.4.2 and the exact Poppler extractor below. From the repository root:
 
+```sh
+bun install --frozen-lockfile
+bun run publication:check
+bun run validate
+bun run documents:check
+bun run manuscript:validate-render -- --bundle
+bun run pages:export
+bun run pages:validate -- .pages
+```
+
+`documents:check` rehashes the retained City Title 18 PDF and reruns
+`pdftotext -layout` with UTF-8. It reports physical pages and nonempty lines.
+`publication:check` compares actual HEAD or explicitly selected `--staged`
+blobs with the local public inputs and native packet. Static export materializes
+the site in `.pages/`; validation inspects that local export. Live collection
+commands and Pages deployment are separate workflows.
+
+## Manuscript outputs
+
+The [canonical manuscript guide](manuscript/README.md) builds an offline PDF
+and HTML using the pinned Template Stages 03 and 04 with aggregate variables and
+the archived figures. The manuscript describes the preserved edition, source
+clocks, and coverage boundaries. The reader build produces a draft, so its
+output carries no legal currency or scientific approval.
+
+The [archived native packet](../review/0.1.0-draft/) has its own renderer pin,
+`c18dae54a07fe6ac3a7b1a1a274251c169a12e7a`. The
+[native review workflow](../.github/workflows/manuscript.yml) specifies that
+toolchain, including its lockfiles, native dependency hashes, and
+`REGION_TEMPLATE_ROOT` and `REGION_TEMPLATE_PYTHON` paths. A new native review
+build is a separate operation. Its packet includes draft PDF/HTML, extracted
+text, citations, evidence and review receipts, a page-count profile and CSV,
+and the figure sources. Source rights and original observations apply to
+both builds.
 
 ## Exact PDF extraction toolchain
 
